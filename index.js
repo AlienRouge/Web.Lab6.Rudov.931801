@@ -16,10 +16,8 @@ let rightColumn = () => {
     rightbar.querySelector("img").style.width="75%"
 }
 let bothColumn = () => {
-    rightbar.style.width = "50%"
-    leftbar.style.width = "50%"
-    rightbar.querySelector("img").style.display="block"
-    leftbar.querySelector("img").style.display="block"
-    rightbar.querySelector("img").style.width="100%"
-    leftbar.querySelector("img").style.width="100%"
+    [rightbar,leftbar].forEach(element => {
+        element.style.width = "50%";
+        element.querySelector("img").style.display="block";
+        element.querySelector("img").style.width="100%";})
 }
